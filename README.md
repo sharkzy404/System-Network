@@ -19,3 +19,5 @@ cd System-Network
 chmod +x Random-tools.py
 
 python3 Random-tools.py
+
+password: 772003
