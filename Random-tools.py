@@ -7,7 +7,7 @@ import pyfiglet
 from pyfiglet import Figlet
 import random
 
-
+system("clear")
 Act = pyfiglet.figlet_format("    [ System ]")
 print(Fore.YELLOW+ Act, Fore.GREEN+ "                        OFFENSIVE  SECURITY v.3.0")
 print (Fore.GREEN+ "#####################################################")
