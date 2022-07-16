@@ -10,10 +10,10 @@ import random
 system("clear")
 Act = pyfiglet.figlet_format("    [ System ]")
 print(Fore.YELLOW+ Act, Fore.GREEN+ "                        OFFENSIVE  SECURITY v.3.0")
-print (Fore.GREEN+ "#####################################################")
-print (Fore.YELLOW+ "#################### SHARKZY SOFTWARE ###############")
-print ("############# SYSTEM INFO TOOLS v.3.0 ###############")
-print (Fore.GREEN+"#####################################################")
+print (Fore.GREEN+ "#"*53)
+print (Fore.YELLOW+ "#"*18,"SHARKZY SOFTWARE", "#"*16)
+print ("#"*18, "SYSTEM INFO TOOLS v.3.0", "#"*16)
+print (Fore.GREEN+"#"*53)
 
 time.sleep(2)
 
@@ -22,28 +22,28 @@ time.sleep(2)
 print (Fore.GREEN+"\nYOUR SYSTEM TIME IS: ", Fore.YELLOW+time.ctime())
 
 time.sleep(2)
-print (Fore.YELLOW+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+print (Fore.YELLOW+"~"*53)
 ac = Figlet(font='mini')
 print(Fore.GREEN+ ac.renderText("   :::: WELCOME     USER :::: "))
-print (Fore.YELLOW+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+print (Fore.YELLOW+"~"*53)
 time.sleep(3)
 
 pasw = input(Fore.BLUE+"::::::::::::::::ENTER TOOL PASSWORD::::::::::::::::::\n"+Fore.GREEN)
 
-print (Fore.YELLOW+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+print (Fore.YELLOW+"~"*53)
 
 if pasw == '772003':
    print ("::::::::::::::::::PASSWORD VERIFIED::::::::::::::::::")
    
 else :
     print(Fore.RED+":::::::::::::::::PASSWORD UNVERIFIED:::::::::::::::::")
-    print(Fore.YELLOW+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    print(Fore.YELLOW+"~"*53)
     sys.exit()   
 
-print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+print ("~"*53)
 time.sleep(5)
 print (Fore.GREEN+"[✓]choose an option  |")
-print ("~~~~~~~~~~~~~~~~~~~~~~\n")
+print ("~"*53,"\n")
 time.sleep(1)
 print (Fore.WHITE+"[1].memory information\n")
 time.sleep(1)
@@ -64,7 +64,7 @@ time.sleep(1)
 print ("[0].Exit the program ]")
 time.sleep(1)
 
-print (Fore.GREEN+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+print (Fore.GREEN+"~"*53)
 time.sleep(1)
 usr = input("\n[+]ENTER AN OPTION: \n"+Fore.YELLOW)
 
@@ -73,14 +73,14 @@ if usr == '1':
     print ("GETTING MEMORY INFOMATION:\n")
     system("clear")
     system("cat /proc/meminfo")
-    print ("#######################################################")
+    print ("#"*53)
     
 elif usr == '2':
     time.sleep(3)
     system("clear")
     print ("CHECKING NETWORK STATUS\n")
     system("netstat")
-    print ("#######################################################")
+    print ("#"*53)
     print ("THANKS @SHARKZY")
     
 elif usr == '3':
@@ -88,7 +88,7 @@ elif usr == '3':
     system("clear")
     print ("CHECKING IP INTERFACE\n")
     system("ifconfig") 
-    print ("#######################################################")
+    print ("#"*53)
     print ("THANKS @SHARKZY")
     
 elif usr == '4':
@@ -97,7 +97,7 @@ elif usr == '4':
     hat = input(Fore.GREEN+"[+].ENTER TARGET WEBSITE OR HOST IP:\n"+Fore.WHITE)
     print (Fore.YELLOW+"\n:::Getting Target info:::\n"+Fore.WHITE)
     system("ping -w 20 " +hat)
-    print ("#######################################################")
+    print ("#"*53)
     print ("THANKS @SHARKZY")
     
     
@@ -117,19 +117,19 @@ elif usr == '6':
         system("clear")
         try:
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            print("##################################################")
+            print("#"*53)
             print ("Socket successfully created")
-            print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+            print("~"*53)
         except socket.error as err:
       
              print ("socket creation failed with error ", (err))
-             print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+             print ("~"*53)
  
         port = 80
         print("\nmake sure there is internet connection\n\nlet (www) be the website protocol\n\nexample: www.google.com\n ") 
-        print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print ("~"*53)
         usr = input("enter server name or ip adress of server :\n")  
-        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print("~"*53)
  
         try:
            host_ip = socket.gethostbyname(usr)
@@ -143,20 +143,20 @@ elif usr == '6':
         s.connect((host_ip, port))
 
         user = (host_ip, port)
-        print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print ("~"*53)
 
 
         data = input("enter message: \n")
         data = data.encode('ascii')
         s.sendto(data, user)
         socket.close(0)
-        print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print ("~"*53)
 
 
         print ("the socket has successfully connected to ", (usr), "at", time.ctime())
-        print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print ("~"*53)
         print("\nmessage sent successfully")
-        print ("#######################################################")
+        print ("#"*53)
         print ("THANKS @SHARKZY")
         
 elif usr == '7':
@@ -221,6 +221,6 @@ elif usr == '8':
                 
 else :
         sys.exit() 
-        print ("#######################################################")
+        print ("#"*53)
         print ("THANKS @SHARKZY")
        
