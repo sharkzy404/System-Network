@@ -28,22 +28,24 @@ print(Fore.GREEN+ ac.renderText("   :::: WELCOME     USER :::: "))
 print (Fore.YELLOW+"~"*53)
 time.sleep(3)
 
-pasw = input(Fore.BLUE+"::::::::::::::::ENTER TOOL PASSWORD::::::::::::::::::\n"+Fore.GREEN)
+while True:
+    pasw = input(Fore.BLUE+"::::::::::::::::ENTER TOOL PASSWORD::::::::::::::::::\n"+Fore.GREEN)
 
-print (Fore.YELLOW+"~"*53)
+    print (Fore.YELLOW+"~"*53)
 
-if pasw == '772003':
-   print ("::::::::::::::::::PASSWORD VERIFIED::::::::::::::::::")
+    if pasw == '772003':
+       print ("::::::::::::::::::PASSWORD VERIFIED::::::::::::::::::")
+       break
    
-else :
-    print(Fore.RED+":::::::::::::::::PASSWORD UNVERIFIED:::::::::::::::::")
-    print(Fore.YELLOW+"~"*53)
-    sys.exit()   
+    else :
+        print(Fore.RED+":::::::::::::::::PASSWORD UNVERIFIED:::::::::::::::::")
+        print(Fore.YELLOW+"~"*53)
+        continue
 
 print ("~"*53)
 time.sleep(5)
 print (Fore.GREEN+"[✓]choose an option  |")
-print ("~"*53,"\n")
+print ("~"*22,"\n")
 time.sleep(1)
 print (Fore.WHITE+"[1].memory information\n")
 time.sleep(1)
@@ -94,7 +96,14 @@ elif usr == '3':
 elif usr == '4':
     time.sleep(3)
     system("clear")
-    hat = input(Fore.GREEN+"[+].ENTER TARGET WEBSITE OR HOST IP:\n"+Fore.WHITE)
+    hat = input(Fore.GREEN+"[+].ENTER TARGET WEBSITE OR HOST IP:\nMake sure there is internet connection\n"+Fore.WHITE)
+    while True:
+        try:
+            data = socket.gethostbyname("www.google.com")
+            break
+        except socket.gaierror:
+            print("connect to the internet")
+            continue
     print (Fore.YELLOW+"\n:::Getting Target info:::\n"+Fore.WHITE)
     system("ping -w 20 " +hat)
     print ("#"*53)
@@ -130,15 +139,16 @@ elif usr == '6':
         print ("~"*53)
         usr = input("enter server name or ip adress of server :\n")  
         print("~"*53)
- 
-        try:
-           host_ip = socket.gethostbyname(usr)
+        while True:
+            try:
+               host_ip = socket.gethostbyname(usr)
+               break
     
-        except socket.gaierror:
+            except socket.gaierror:
  
-              print ("there was an error resolving the host")
-              print("try checking the internet connection and  spellings")
-              sys.exit()
+               print ("there was an error resolving the host")
+               print("try checking the internet connection and  spellings")
+               continue
 
         s.connect((host_ip, port))
 
@@ -164,21 +174,19 @@ elif usr == '7':
     system("clear")
     print("GET TARGET WEBSITE\n") 
     time.sleep(1)
-    try:
-        socket.gethostbyname("www.google.com")
-    except socket.gaierror:
-        print("No internet connection") 
-        sys.exit(0)
-        print("\nTHANKS @SHARKZY")    
+    while True:
+        try:
+            socket.gethostbyname("www.google.com")
+            break
+        except socket.gaierror:
+            print("No internet connection") 
+            continue   
  
     _host_ = input("Enter target URL ADDRESS\n"+ Fore.WHITE+ "https://") 
-   
     try:
            _name_ = socket.gethostbyname(_host_)
     except socket.gaierror:
           print("no website found\ntry checking your internet")
-          sys.exit(0) 
-          print("THANKS @SHARKY")     
           
     print("Target IP is :  ", Fore.GREEN+ _name_+ Style.RESET_ALL)
     print("\nTHANKS  @SHARKY")
